@@ -1,0 +1,29 @@
+[
+    {
+        "label": "debug_print",
+        "kind": 2,
+        "importPath": "basics.mergesort",
+        "description": "basics.mergesort",
+        "peekOfCode": "def debug_print(debug_msg=None, **kwargs):\n    if debug_msg:\n        print(debug_msg)\n    for key, value in kwargs.items():\n        print(\"{}: {}\".format(key, value))\ndef mergesort(array):\n    debug_print(array=array)\n    if len(array) <= 1:\n        return array\n    m = len(array) // 2",
+        "detail": "basics.mergesort",
+        "documentation": {}
+    },
+    {
+        "label": "mergesort",
+        "kind": 2,
+        "importPath": "basics.mergesort",
+        "description": "basics.mergesort",
+        "peekOfCode": "def mergesort(array):\n    debug_print(array=array)\n    if len(array) <= 1:\n        return array\n    m = len(array) // 2\n    debug_print(m=m)\n    left = mergesort(array[:m])\n    right = mergesort(array[m:])\n    return merge(left, right)\ndef merge(left, right):",
+        "detail": "basics.mergesort",
+        "documentation": {}
+    },
+    {
+        "label": "merge",
+        "kind": 2,
+        "importPath": "basics.mergesort",
+        "description": "basics.mergesort",
+        "peekOfCode": "def merge(left, right):\n    debug_print(debug_msg=\"Merging...\", left=left, right=right)\n    merged = []\n    while len(left) > 0 and len(right) > 0:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    if len(left) > 0:\n        merged += left",
+        "detail": "basics.mergesort",
+        "documentation": {}
+    }
+]
